@@ -19,6 +19,7 @@ public class Account {
 
     private BigDecimal balance;
 
+    @Enumerated(EnumType.STRING)
     private Account_status status;
 
     @Column(name = "created_at")

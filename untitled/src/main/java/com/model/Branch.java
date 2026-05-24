@@ -93,7 +93,6 @@ public class Branch {
                 ", ifscCode='" + ifscCode + '\'' +
                 ", city='" + city + '\'' +
                 ", address='" + address + '\'' +
-                ", accounts=" + accounts +
                 '}';
     }
 }

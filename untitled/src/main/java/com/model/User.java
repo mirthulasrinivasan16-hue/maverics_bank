@@ -16,6 +16,8 @@ import jakarta.persistence.*;
         private String username;
         private String email;
         private String password;
+
+        @Enumerated(EnumType.STRING)
         private Role role;
 
         @Column(name = "created_at")

@@ -19,6 +19,7 @@ public class Customer {
 
     private LocalDate dob;
 
+    @Enumerated(EnumType.STRING)
     private Gender gender;
     private String phone;
 
