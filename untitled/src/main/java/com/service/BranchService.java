@@ -18,11 +18,7 @@ public class BranchService {
 
     public void insert(Branch branch) {
 
-        // begin the transaction
-
         Transaction tx = session.beginTransaction();
-
-        // DB Operation
 
         session.persist(branch);
 
@@ -33,21 +29,15 @@ public class BranchService {
 
         Transaction tx = session.beginTransaction();
 
-        // Validate ID -- find the id in DB and fetch the object
-
         Branch branch = session.find(Branch.class, id);
 
         if(branch == null) {
 
             tx.commit();
-
             throw new ResourceNotFoundException("Invalid ID given..");
         }
 
-        // Remove the object
-
         session.remove(branch);
-
         tx.commit();
     }
 
@@ -55,12 +45,9 @@ public class BranchService {
 
         Transaction tx = session.beginTransaction();
 
-        List<Branch> list = session
-                .createQuery("from Branch", Branch.class)
-                .list();
+        List<Branch> list = session.createQuery("from Branch", Branch.class).list();
 
         tx.commit();
-
         return list;
     }
 
@@ -69,11 +56,9 @@ public class BranchService {
         Transaction tx = session.beginTransaction();
 
         Branch branch = session.find(Branch.class, id);
-
         tx.commit();
 
         if(branch == null)
-
             throw new ResourceNotFoundException("Invalid ID given..");
 
         return branch;

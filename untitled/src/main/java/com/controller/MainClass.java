@@ -3,6 +3,8 @@ package com.controller;
 import com.config.HibernateConfig;
 import com.exception.ResourceNotFoundException;
 import com.model.Branch;
+import com.model.User;
+import com.service.AuthService;
 import com.service.BranchService;
 
 import org.hibernate.Session;
@@ -28,7 +30,39 @@ public class MainClass {
         BranchService branchService =
                 new BranchService(session);
 
-        while(true){
+        AuthService authService =
+                new AuthService(session);
+
+        System.out.println("===== LOGIN =====");
+
+        System.out.println("Enter Username: ");
+
+        String username = sc.nextLine();
+
+        System.out.println("Enter Password: ");
+
+        String password = sc.nextLine();
+
+        User user;
+
+        try {
+
+            user = authService.login(username, password);
+
+            System.out.println("Login Successful");
+
+        } catch (Exception e) {
+
+            System.out.println("Invalid Username or Password");
+
+            session.close();
+
+            sc.close();
+
+            return;
+        }
+
+        while (true) {
 
             System.out.println("1. Add Branch");
             System.out.println("2. Delete Branch by id");
@@ -38,10 +72,10 @@ public class MainClass {
 
             int op = sc.nextInt();
 
-            if(op == 0)
+            if (op == 0)
                 break;
 
-            switch(op){
+            switch (op) {
 
                 case 1:
 
@@ -73,9 +107,15 @@ public class MainClass {
 
                     int id = sc.nextInt();
 
-                    branchService.deleteRecord(id);
+                    try {
 
-                    System.out.println("Record deleted");
+                        branchService.deleteRecord(id);
+
+                        System.out.println("Record deleted");
+                    } catch (ResourceNotFoundException e) {
+
+                        System.out.println(e.getMessage());
+                    }
 
                     break;
 
@@ -89,40 +129,43 @@ public class MainClass {
                     list.forEach(System.out::println);
 
                     break;
+
                 case 4:
 
                     System.out.println("Enter the branch id to update");
 
                     id = sc.nextInt();
 
-                    try{
+                    try {
 
                         branch = branchService.getById(id);
 
-                        // this comes from DB
-
-                        System.out.println("Existing branch record " + branch);
+                        System.out.println(
+                                "Existing branch record " + branch
+                        );
 
                         sc.nextLine();
 
                         System.out.println("Enter Branch Name: ");
+
                         branch.setBranchName(sc.nextLine());
 
                         System.out.println("Enter IFSC Code: ");
+
                         branch.setIfscCode(sc.nextLine());
 
                         System.out.println("Enter City: ");
+
                         branch.setCity(sc.nextLine());
 
                         System.out.println("Enter Address: ");
+
                         branch.setAddress(sc.nextLine());
 
                         branchService.insert(branch);
 
                         System.out.println("Branch Updated");
-                    }
-
-                    catch (ResourceNotFoundException e){
+                    } catch (ResourceNotFoundException e) {
 
                         System.out.println(e.getMessage());
                     }
