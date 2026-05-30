@@ -1,0 +1,212 @@
+/* ==========================================
+   DASHBOARD PAGE STYLES
+========================================== */
+
+/* Dashboard Cards */
+
+.stat-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:25px;
+    border:none;
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+    transition:all 0.3s ease;
+    height:100%;
+}
+
+.stat-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,0.10);
+}
+
+.stat-card h3{
+    font-size:2rem;
+    font-weight:700;
+    margin:0;
+}
+
+.stat-card p{
+    margin-bottom:8px;
+    color:#64748b;
+}
+
+/* Dashboard Icons */
+
+.stat-icon{
+    width:65px;
+    height:65px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+}
+
+.icon-primary{
+    background:#e7f1ff;
+    color:#0d6efd;
+}
+
+.icon-success{
+    background:#eafaf1;
+    color:#198754;
+}
+
+.icon-warning{
+    background:#fff8e1;
+    color:#ffc107;
+}
+
+.icon-danger{
+    background:#fdeaea;
+    color:#dc3545;
+}
+
+/* Quick Actions */
+
+.quick-action-btn{
+    height:55px;
+    font-weight:600;
+    border-radius:12px;
+    transition:all .3s ease;
+}
+
+.quick-action-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Summary Cards */
+
+.summary-card{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    height:100%;
+}
+
+.summary-card h5{
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+/* Chart Cards */
+
+.chart-card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    height:100%;
+}
+
+.chart-card canvas{
+    max-height:350px;
+}
+
+/* Dashboard Tables */
+
+.dashboard-table{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.dashboard-table table{
+    margin-bottom:0;
+}
+
+/* Activity Status */
+
+.status-success{
+    background:#198754;
+    color:#fff;
+}
+
+.status-pending{
+    background:#ffc107;
+    color:#000;
+}
+
+.status-failed{
+    background:#dc3545;
+    color:#fff;
+}
+
+/* Welcome Banner */
+
+.welcome-banner{
+    background:linear-gradient(
+        135deg,
+        #0d6efd,
+        #3b82f6
+    );
+    color:#fff;
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+}
+
+.welcome-banner h2{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.welcome-banner p{
+    margin:0;
+    opacity:0.9;
+}
+
+/* Recent Activity */
+
+.activity-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:15px 0;
+    border-bottom:1px solid #eef2f7;
+}
+
+.activity-item:last-child{
+    border-bottom:none;
+}
+
+.activity-icon{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef5ff;
+    color:#0d6efd;
+}
+
+/* Mobile */
+
+@media(max-width:992px){
+
+    .stat-card{
+        margin-bottom:15px;
+    }
+
+    .chart-card{
+        margin-bottom:20px;
+    }
+}
+
+@media(max-width:768px){
+
+    .stat-card h3{
+        font-size:1.5rem;
+    }
+
+    .welcome-banner{
+        padding:20px;
+    }
+
+    .chart-card{
+        padding:15px;
+    }
+}

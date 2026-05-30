@@ -1,0 +1,245 @@
+/* ==========================================
+   MAVERICS BANK - RESPONSIVE STYLES
+========================================== */
+
+/* ==========================
+   LARGE TABLETS
+========================== */
+
+@media (max-width: 1200px){
+
+    .search-box input{
+        width:180px;
+    }
+
+    .page-title{
+        font-size:26px;
+    }
+}
+
+/* ==========================
+   TABLETS
+========================== */
+
+@media (max-width: 992px){
+
+    /* Sidebar */
+
+    .sidebar{
+        position:fixed;
+        left:-260px;
+        top:0;
+        width:260px;
+        height:100vh;
+        z-index:1050;
+        transition:all .3s ease;
+    }
+
+    .sidebar.show{
+        left:0;
+    }
+
+    /* Content */
+
+    .main-content{
+        margin-left:0;
+        padding:20px;
+    }
+
+    /* Navbar */
+
+    .top-navbar{
+        padding:15px;
+    }
+
+    .search-box input{
+        width:120px;
+    }
+
+    .profile-dropdown div{
+        display:none;
+    }
+
+    /* Cards */
+
+    .stat-card,
+    .bank-card,
+    .chart-card{
+        margin-bottom:15px;
+    }
+
+    /* Tables */
+
+    .table-container{
+        overflow-x:auto;
+    }
+
+    table{
+        min-width:800px;
+    }
+}
+
+/* ==========================
+   MOBILE DEVICES
+========================== */
+
+@media (max-width: 768px){
+
+    .main-content{
+        padding:15px;
+    }
+
+    .top-navbar{
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    .navbar-left,
+    .navbar-right{
+        width:100%;
+        justify-content:space-between;
+    }
+
+    .search-box{
+        width:100%;
+    }
+
+    .search-box input{
+        width:100%;
+    }
+
+    .page-title{
+        font-size:22px;
+    }
+
+    .page-subtitle{
+        font-size:14px;
+    }
+
+    /* Dashboard Cards */
+
+    .stat-card{
+        text-align:center;
+    }
+
+    .stat-icon{
+        margin:auto;
+    }
+
+    /* Buttons */
+
+    .btn-bank,
+    .btn-outline-bank{
+        width:100%;
+    }
+
+    /* Forms */
+
+    .form-actions{
+        flex-direction:column;
+    }
+
+    .form-actions .btn{
+        width:100%;
+    }
+
+    /* Tables */
+
+    .table-container{
+        padding:15px;
+    }
+
+    /* Modals */
+
+    .modal-dialog{
+        margin:10px;
+    }
+}
+
+/* ==========================
+   SMALL PHONES
+========================== */
+
+@media (max-width: 576px){
+
+    .sidebar{
+        width:240px;
+    }
+
+    .main-content{
+        padding:12px;
+    }
+
+    .top-navbar{
+        border-radius:12px;
+    }
+
+    .bank-card,
+    .stat-card,
+    .chart-card,
+    .table-container{
+        border-radius:15px;
+    }
+
+    .page-title{
+        font-size:20px;
+    }
+
+    .page-subtitle{
+        font-size:13px;
+    }
+
+    .sidebar-header h3{
+        font-size:1rem;
+    }
+
+    .search-box{
+        padding:8px 12px;
+    }
+
+    .nav-icon-btn{
+        width:40px;
+        height:40px;
+    }
+
+    .profile-dropdown img{
+        width:40px;
+        height:40px;
+    }
+
+    .badge{
+        font-size:.7rem;
+    }
+}
+
+/* ==========================
+   EXTRA SMALL PHONES
+========================== */
+
+@media (max-width: 400px){
+
+    .page-title{
+        font-size:18px;
+    }
+
+    .top-navbar{
+        padding:12px;
+    }
+
+    .main-content{
+        padding:10px;
+    }
+
+    .search-box{
+        font-size:14px;
+    }
+
+    .btn-bank,
+    .btn-outline-bank{
+        font-size:14px;
+    }
+
+    .table-container{
+        padding:10px;
+    }
+}

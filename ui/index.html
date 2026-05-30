@@ -1,0 +1,221 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maverics Bank | Login</title>
+
+    <!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        body{
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(
+                135deg,
+                #0d6efd,
+                #0b5ed7,
+                #084298
+            );
+            padding:20px;
+        }
+
+        .login-card{
+            background:#fff;
+            border-radius:25px;
+            padding:40px;
+            width:100%;
+            max-width:450px;
+            box-shadow:0 15px 40px rgba(0,0,0,.15);
+        }
+
+        .bank-logo{
+            width:90px;
+            height:90px;
+            margin:auto;
+            background:#eef5ff;
+            border-radius:50%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            margin-bottom:20px;
+        }
+
+        .bank-logo i{
+            font-size:40px;
+            color:#0d6efd;
+        }
+
+        .login-title{
+            font-weight:700;
+            text-align:center;
+            margin-bottom:5px;
+        }
+
+        .login-subtitle{
+            text-align:center;
+            color:#6c757d;
+            margin-bottom:30px;
+        }
+
+        .input-group-text{
+            background:#f8f9fa;
+        }
+
+        .form-control{
+            height:50px;
+        }
+
+        .btn-login{
+            background:#0d6efd;
+            color:#fff;
+            border:none;
+            height:50px;
+            font-weight:600;
+            border-radius:10px;
+        }
+
+        .btn-login:hover{
+            background:#0b5ed7;
+            color:#fff;
+        }
+
+        .footer-text{
+            text-align:center;
+            margin-top:20px;
+            color:#6c757d;
+        }
+
+        .footer-text a{
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-card">
+
+    <!-- Logo -->
+    <div class="bank-logo">
+        <i class="bi bi-bank2"></i>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="login-title">
+        Maverics Bank
+    </h2>
+
+    <p class="login-subtitle">
+        Secure Banking Management System
+    </p>
+
+    <!-- Login Form -->
+    <form>
+
+        <!-- Username -->
+        <div class="mb-3">
+
+            <label class="form-label">
+                Username
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text">
+                    <i class="bi bi-person-fill"></i>
+                </span>
+
+                <input type="text"
+                       class="form-control"
+                       placeholder="Enter username">
+
+            </div>
+
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+
+            <label class="form-label">
+                Password
+            </label>
+
+            <div class="input-group">
+
+                <span class="input-group-text">
+                    <i class="bi bi-lock-fill"></i>
+                </span>
+
+                <input type="password"
+                       class="form-control"
+                       placeholder="Enter password">
+
+            </div>
+
+        </div>
+
+        <!-- Remember -->
+        <div class="d-flex justify-content-between mb-4">
+
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="checkbox"
+                       id="remember">
+
+                <label class="form-check-label"
+                       for="remember">
+                    Remember Me
+                </label>
+            </div>
+
+            <a href="#">
+                Forgot Password?
+            </a>
+
+        </div>
+
+        <!-- Login Button -->
+        <button type="submit"
+                class="btn btn-login w-100">
+
+            <i class="bi bi-box-arrow-in-right me-2"></i>
+            Login
+
+        </button>
+
+    </form>
+
+    <!-- Register -->
+    <div class="footer-text">
+
+        Don't have an account?
+
+        <a href="#">
+            Register
+        </a>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/main.js"></script>
+<script src="js/validation.js"></script>
+
+</body>
+</html>
+```

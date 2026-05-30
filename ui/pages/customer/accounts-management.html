@@ -1,0 +1,430 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts Management | Maverics Bank</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+<link rel="stylesheet" href="../../css/forms.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+</head>
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+<div class="sidebar">
+
+    <div class="sidebar-header">
+        <i class="bi bi-bank2"></i>
+        <h3>Maverics Bank</h3>
+    </div>
+
+    <ul class="sidebar-menu">
+
+        <li>
+            <a href="customer-dashboard.html">
+                <i class="bi bi-grid-fill"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="accounts-management.html" class="active">
+                <i class="bi bi-wallet2"></i>
+                Accounts
+            </a>
+        </li>
+
+        <li>
+            <a href="transactions.html">
+                <i class="bi bi-arrow-left-right"></i>
+                Transactions
+            </a>
+        </li>
+
+        <li>
+            <a href="beneficiaries.html">
+                <i class="bi bi-people-fill"></i>
+                Beneficiaries
+            </a>
+        </li>
+
+        <li>
+            <a href="loans.html">
+                <i class="bi bi-cash-stack"></i>
+                Loans
+            </a>
+        </li>
+
+        <li>
+            <a href="reports.html">
+                <i class="bi bi-bar-chart-fill"></i>
+                Reports
+            </a>
+        </li>
+
+        <li class="logout-link">
+            <a href="../../index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                Logout
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<div class="main-content">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="top-navbar">
+
+        <div class="navbar-left">
+
+            <button class="mobile-toggle d-lg-none">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="search-box">
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search accounts...">
+            </div>
+
+        </div>
+
+        <div class="navbar-right">
+
+            <button class="nav-icon-btn">
+                <i class="bi bi-bell-fill"></i>
+                <span class="nav-badge">3</span>
+            </button>
+
+            <button class="nav-icon-btn">
+                <i class="bi bi-envelope-fill"></i>
+                <span class="nav-badge">5</span>
+            </button>
+
+            <div class="dropdown">
+
+                <a href="#"
+                   class="profile-dropdown dropdown-toggle"
+                   data-bs-toggle="dropdown">
+
+                    <img src="../../assets/images/profile-default.png"
+                         alt="Profile">
+
+                    <div>
+                        <h6>John Smith</h6>
+                        <small>Customer</small>
+                    </div>
+
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-person-circle me-2"></i>
+                            Profile
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="bi bi-gear-fill me-2"></i>
+                            Settings
+                        </a>
+                    </li>
+
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li>
+                        <a class="dropdown-item text-danger"
+                           href="../../index.html">
+                            <i class="bi bi-box-arrow-right me-2"></i>
+                            Logout
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= PAGE HEADER ================= -->
+    <div class="page-header">
+
+        <h2 class="page-title">
+            Accounts Management
+        </h2>
+
+        <p class="page-subtitle">
+            View and manage all your bank accounts.
+        </p>
+
+    </div>
+
+    <!-- ================= SEARCH & FILTER ================= -->
+    <div class="bank-card p-4 mb-4">
+
+        <div class="row g-3">
+
+            <div class="col-lg-5">
+
+                <input type="text"
+                       class="form-control"
+                       placeholder="Search Account Number">
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <select class="form-select">
+                    <option>All Accounts</option>
+                    <option>Savings Account</option>
+                    <option>Current Account</option>
+                    <option>Fixed Deposit</option>
+                </select>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <button class="btn btn-bank w-100">
+                    <i class="bi bi-plus-circle me-2"></i>
+                    Open Account
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= ACCOUNT TABLE ================= -->
+    <div class="table-container p-4">
+
+        <div class="table-responsive">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+
+                    <tr>
+                        <th>Account Number</th>
+                        <th>Type</th>
+                        <th>Branch</th>
+                        <th>Balance</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>10000012345</td>
+                        <td>Savings</td>
+                        <td>Chennai</td>
+                        <td>₹1,25,000</td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#accountModal">
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button class="btn btn-warning btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>10000012346</td>
+                        <td>Current</td>
+                        <td>Tambaram</td>
+                        <td>₹3,40,000</td>
+
+                        <td>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#accountModal">
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button class="btn btn-warning btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>10000012347</td>
+                        <td>Fixed Deposit</td>
+                        <td>Velachery</td>
+                        <td>₹5,00,000</td>
+
+                        <td>
+                            <span class="badge bg-secondary">
+                                Closed
+                            </span>
+                        </td>
+
+                        <td>
+
+                            <button class="btn btn-primary btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#accountModal">
+                                <i class="bi bi-eye"></i>
+                            </button>
+
+                            <button class="btn btn-warning btn-sm">
+                                <i class="bi bi-pencil-square"></i>
+                            </button>
+
+                            <button class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ================= ACCOUNT DETAILS MODAL ================= -->
+<div class="modal fade"
+     id="accountModal"
+     tabindex="-1">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Account Details
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <strong>Account Number</strong>
+                        <p>10000012345</p>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <strong>Account Type</strong>
+                        <p>Savings Account</p>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <strong>Branch</strong>
+                        <p>Chennai Branch</p>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <strong>Balance</strong>
+                        <p>₹1,25,000</p>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <strong>Status</strong>
+                        <p>
+                            <span class="badge bg-success">
+                                Active
+                            </span>
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+
+                <button class="btn btn-bank">
+                    Update Account
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="../../js/main.js"></script>
+
+</body>
+</html>
+```

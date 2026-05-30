@@ -1,0 +1,188 @@
+/* ==========================================
+   MAVERICS BANK - FORM STYLES
+========================================== */
+
+/* Form Labels */
+
+.form-label{
+    font-weight:600;
+    color:#334155;
+    margin-bottom:8px;
+}
+
+/* Input Fields */
+
+.form-control,
+.form-select{
+    height:50px;
+    border:1px solid #dbe3ec;
+    border-radius:12px;
+    background:#fff;
+    transition:all .3s ease;
+}
+
+.form-control:focus,
+.form-select:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 0 0.2rem rgba(13,110,253,.15);
+}
+
+/* Textarea */
+
+textarea.form-control{
+    min-height:120px;
+    resize:vertical;
+}
+
+/* Input Group */
+
+.input-group-text{
+    background:#f8fafc;
+    border:1px solid #dbe3ec;
+    color:#64748b;
+}
+
+/* Placeholder */
+
+.form-control::placeholder{
+    color:#94a3b8;
+}
+
+/* Search Box Forms */
+
+.search-form{
+    background:#fff;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+/* Filter Section */
+
+.filter-section{
+    background:#fff;
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    margin-bottom:20px;
+}
+
+/* Form Cards */
+
+.form-card{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+/* Required Field */
+
+.required::after{
+    content:" *";
+    color:#dc3545;
+}
+
+/* Checkbox */
+
+.form-check-input{
+    cursor:pointer;
+}
+
+.form-check-input:checked{
+    background-color:#0d6efd;
+    border-color:#0d6efd;
+}
+
+/* Radio Button */
+
+.form-check-input[type="radio"]:checked{
+    background-color:#0d6efd;
+    border-color:#0d6efd;
+}
+
+/* Validation */
+
+.is-valid{
+    border-color:#198754 !important;
+}
+
+.is-invalid{
+    border-color:#dc3545 !important;
+}
+
+/* Validation Messages */
+
+.valid-feedback{
+    color:#198754;
+}
+
+.invalid-feedback{
+    color:#dc3545;
+}
+
+/* Form Buttons */
+
+.form-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+/* Modal Forms */
+
+.modal .form-control,
+.modal .form-select{
+    height:48px;
+}
+
+/* Loan Form */
+
+.loan-form .form-control,
+.loan-form .form-select{
+    background:#fafcff;
+}
+
+/* Beneficiary Form */
+
+.beneficiary-form{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+/* Login Form */
+
+.login-form .form-control{
+    height:55px;
+    border-radius:12px;
+}
+
+.login-form .btn{
+    height:50px;
+    border-radius:12px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .form-card{
+        padding:20px;
+    }
+
+    .search-form,
+    .filter-section{
+        padding:15px;
+    }
+
+    .form-actions{
+        flex-direction:column;
+    }
+
+    .form-actions .btn{
+        width:100%;
+    }
+}
