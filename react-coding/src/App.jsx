@@ -3,6 +3,7 @@ import { Routes, Route, Link } from "react-router-dom"
 import UserList from "./pages/UserList"
 import AddUser from "./pages/AddUser"
 import Home from "./pages/Home"
+import CharacterList from "./components/CharacterList"
 
 const App = ()=>{
 
@@ -11,14 +12,18 @@ const App = ()=>{
             <div className="container mt-4">
 
                 <Routes>
+
+                  <Route path="/"
+                        element={<Home />} />
+
                     <Route path="/users"
                         element={<UserList />}/>
 
                     <Route path="/add-user"
                         element={<AddUser />}/>
 
-                    <Route path="/"
-                        element={<Home />} />
+                    <Route path="/character"
+                        element={<CharacterList />} />
 
                 </Routes>
 
