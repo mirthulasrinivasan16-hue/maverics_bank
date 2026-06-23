@@ -18,7 +18,7 @@ const CharacterList = () => {
 
         <div className="container mt-4">
 
-            <h2>xCharacters</h2>
+            <h2>Characters</h2>
 
             <table className="table table-bordered">
 
@@ -59,9 +59,17 @@ const CharacterList = () => {
 
             <div className="text-center">
 
-                <button className="btn btn-primary me-2" disabled={page === 1} onClick={() => setPage(page - 1)}> Previous </button>
+                <button 
+                className="btn btn-primary me-2" 
+                disabled={page === 1} 
+                onClick={() => setPage(page - 1)}> 
+                Previous </button>
                 <span> Page {page} </span>
-                <button className="btn btn-primary ms-2" disabled={page === totalPages} onClick={() => setPage(page + 1)}>Next </button>
+                <button 
+                className="btn btn-primary ms-2" 
+                disabled={page === totalPages} 
+                onClick={() => setPage(page + 1)}>
+                Next </button>
 
             </div>
 

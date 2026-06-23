@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import Navbar from "../components/Navbar"
+import Navbar from "./Navbar"
 
 const UserList = ()=>{
 

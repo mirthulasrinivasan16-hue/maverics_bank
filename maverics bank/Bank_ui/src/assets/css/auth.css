@@ -1,0 +1,520 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    overflow-y:auto;
+    overflow-x:hidden;
+    font-family:
+            "Segoe UI",
+            Tahoma,
+            Geneva,
+            Verdana,
+            sans-serif;
+}
+
+#root{
+    width:100vw;
+    height:100vh;
+}
+
+/* ===========================
+   MAIN LAYOUT
+=========================== */
+
+.auth-container{
+
+    width:100vw;
+    height:100vh;
+
+    display:flex;
+
+    overflow:hidden;
+
+    background:#f5f7f8;
+}
+
+/* ===========================
+   LEFT PANEL
+=========================== */
+
+.auth-left{
+
+    flex:1;
+
+    background:
+            linear-gradient(
+                    135deg,
+                    #00131d 0%,
+                    #012936 40%,
+                    #003c45 100%
+            );
+
+    color:white;
+
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    position:relative;
+}
+
+.auth-left::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+            radial-gradient(
+                    circle at center,
+                    rgba(0,255,255,.08),
+                    transparent 60%
+            );
+
+    pointer-events:none;
+}
+
+.logo{
+    position:absolute;
+    top:20px;
+    left:30px;
+    z-index:10;
+}
+
+.logo h1{
+
+    font-size:58px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:20;
+}
+
+.logo span{
+
+    color:#17e5d7;
+
+    font-size:28px;
+
+    letter-spacing:6px;
+
+    font-weight:600;
+
+    margin-bottom:20;
+}
+
+.hero-content{
+    margin-top:180px;
+}
+.hero-content h2{
+
+    font-size:78px;
+
+    font-weight:700;
+
+    line-height:1.08;
+
+    margin-bottom:30px;
+}
+
+.hero-content h2 span{
+
+    display:block;
+
+    color:#17e5d7;
+}
+
+.hero-content > p{
+
+    font-size:24px;
+
+    line-height:1.7;
+
+    color:#d8d8d8;
+
+    margin-bottom:50px;
+}
+
+/* ===========================
+   FEATURES
+=========================== */
+
+.feature{
+
+    margin-bottom:30px;
+}
+
+.feature h4{
+
+    font-size:28px;
+
+    margin-bottom:10px;
+
+    color:white;
+}
+
+.feature p{
+
+    font-size:18px;
+
+    color:#d6d6d6;
+
+    line-height:1.7;
+}
+
+/* ===========================
+   RIGHT PANEL
+=========================== */
+
+.auth-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:30px;
+
+    background:#f5f7f8;
+
+    overflow-y:auto;
+
+    margin-bottom:20px;
+
+    margin-top:10px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.auth-card{
+
+    width:100%;
+
+    max-width:750px;
+
+    background:white;
+
+    margin-top:10px;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow:
+            0 10px 40px
+            rgba(0,0,0,.08);
+}
+
+.auth-card h5{
+
+    color:#006f69;
+
+    font-size:24px;
+
+    margin-bottom:15px;
+}
+
+.auth-card h1{
+
+    font-size:56px;
+
+    font-weight:700;
+
+    color:#0b1b2b;
+
+    margin-bottom:20px;
+}
+
+.auth-card > p{
+
+    color:#666;
+
+    font-size:20px;
+
+    margin-top:10px;
+
+    margin-bottom:35px;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.auth-card form{
+
+    width:100%;
+}
+
+.auth-card label{
+
+    display:block;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+    margin-top:20px;
+
+    color:#0b1b2b;
+}
+
+.auth-card input,
+.auth-card select{
+
+    width:100%;
+
+    height:60px;
+
+    padding:0 18px;
+
+    border:1px solid #d7dce0;
+
+    border-radius:14px;
+
+    outline:none;
+
+    font-size:17px;
+
+    background:white;
+
+    transition:.3s;
+
+    color:#000;
+}
+
+.auth-card input:focus,
+.auth-card select:focus{
+
+    border-color:#00b3aa;
+
+    box-shadow:
+            0 0 0 3px
+            rgba(0,179,170,.15);
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.auth-btn{
+
+    width:100%;
+
+    height:65px;
+
+    margin-top:35px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    #002d33,
+                    #005c5f
+            );
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.auth-btn:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.95;
+}
+
+/* ===========================
+   SIGNUP BOX
+=========================== */
+
+.signup-box{
+
+    margin-top:35px;
+
+    background:#eef6f5;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.signup-box h4{
+
+    font-size:24px;
+
+    color:#0b1b2b;
+
+    margin-bottom:10px;
+}
+
+.signup-box p{
+
+    color:#666;
+
+    font-size:18px;
+}
+
+.signup-btn{
+
+    text-decoration:none;
+
+    background:#003e43;
+
+    color:white;
+
+    padding:15px 28px;
+
+    border-radius:12px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.signup-btn:hover{
+
+    background:#00565d;
+}
+
+/* ===========================
+   ERROR
+=========================== */
+
+.error-msg{
+
+    background:#ffe8e8;
+
+    color:#cc0000;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+}
+
+/* ===========================
+   COMPLETE PROFILE
+=========================== */
+
+.complete-profile-card{
+
+    width:100%;
+
+    max-width:800px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1200px){
+
+    .hero-content h2{
+
+        font-size:60px;
+    }
+
+    .auth-card h1{
+
+        font-size:42px;
+    }
+}
+
+@media(max-width:900px){
+
+    body{
+        overflow:auto;
+    }
+
+    .auth-container{
+
+        flex-direction:column;
+
+        height:auto;
+    }
+
+    .auth-left{
+
+        min-height:450px;
+    }
+
+    .auth-right{
+
+        padding:20px;
+    }
+
+    .hero-content h2{
+
+        font-size:48px;
+    }
+
+    .auth-card{
+
+        padding:30px;
+    }
+
+    .auth-card h1{
+
+        font-size:36px;
+    }
+
+    .signup-box{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        text-align:center;
+    }
+}
+
+.auth-header h1{
+    font-size:72px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.auth-header p{
+    font-size:18px;
+    color:#64748b;
+    margin-top:10px;
+}

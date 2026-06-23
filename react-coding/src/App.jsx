@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom"
 
-import UserList from "./pages/UserList"
-import AddUser from "./pages/AddUser"
+import UserList from "./components/UserList"
+import AddUser from "./components/AddUser"
 import Home from "./pages/Home"
 import CharacterList from "./components/CharacterList"
 
